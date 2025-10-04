@@ -1,6 +1,7 @@
 alert('Boas vindas ao jogo do número secreto!');
 let numeroSecreto = 29;
 let chute;
+let tentativas = 1;
 
 
 while (chute != numeroSecreto) {
@@ -8,7 +9,7 @@ while (chute != numeroSecreto) {
     chute = prompt('Escola um número entre 1 e 30');
 
     if (chute == numeroSecreto) {
-        alert(`Isso aí! Você descobriu o número secreto ${numeroSecreto}`)
+        alert(`Isso aí! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`)
     }
     else {
         if (chute > numeroSecreto) {
@@ -16,6 +17,8 @@ while (chute != numeroSecreto) {
         } else {
             alert(`O número secreto é maior que o ${chute}`)
         }
+        // tentativas = tentativas + 1;
+        tentativas ++
     }
 }
 
