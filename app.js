@@ -1,15 +1,21 @@
 alert('Boas vindas ao jogo do número secreto!');
 let numeroSecreto = 29;
-let chute = prompt('Escola um número entre 1 e 30')
+let chute;
 
-if(numeroSecreto == chute){
-    alert(`Isso aí! Você descobriu o número secreto ${numeroSecreto}`)
-}
-else{
-    if(chute > numeroSecreto){
-        alert(`O número secreto é maior que o ${chute}`)
-    } else{
-        alert(`O número secreto é menor que o ${chute}`)
+
+while (chute != numeroSecreto) {
+
+    chute = prompt('Escola um número entre 1 e 30');
+
+    if (chute == numeroSecreto) {
+        alert(`Isso aí! Você descobriu o número secreto ${numeroSecreto}`)
+    }
+    else {
+        if (chute > numeroSecreto) {
+            alert(`O número secreto é menor que o ${chute}`)
+        } else {
+            alert(`O número secreto é maior que o ${chute}`)
+        }
     }
 }
 
